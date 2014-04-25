@@ -15,7 +15,8 @@ class Car
     @car_id += 1
   end
 
-  attr_reader :car_id
+  attr_reader :car_id, :init_value
+  attr_accessor :make, :model, :year, :dep_rate
 
   def initialize(init_value, make, model, year, dep_rate = 1.00/USEFUL_LIFE)
     @init_value = init_value
@@ -25,6 +26,18 @@ class Car
     @dep_rate = dep_rate
     @car_id = Car.gen_car_id
   end
+
+  def age
+    time = Time.new
+    time.year - year
+  end
+
+  # def yearly_dep
+  #   init_value /
+  # end
+
+
+
 end
 
 
