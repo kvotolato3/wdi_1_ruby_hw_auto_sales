@@ -1,7 +1,7 @@
-require 'pry'
 
 class Car
-  def initialize(init_value, make, model, year, dep_rate)
+  USEFUL_LIFE = 10
+  def initialize(init_value, make, model, year, dep_rate = 1.00/USEFUL_LIFE)
     @init_value = init_value
     @make = make
     @model = model
@@ -10,4 +10,5 @@ class Car
   end
 end
 
-binding.pry
+
+

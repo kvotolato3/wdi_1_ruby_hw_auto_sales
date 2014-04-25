@@ -1,5 +1,5 @@
 
-- Create a car lot
+- (done) Create a car lot
 - Add a car to the lot
 - Look up the sales price of a car
 - Look up the lot value (sum of SP of all cars on the lot)
