@@ -10,6 +10,10 @@ class CarLot
   def add_car(car)
     @cars << car
   end
+
+  def get_lot
+    @cars
+  end
 end
 
 
