@@ -1,15 +1,19 @@
 
 require_relative '../lib/car_lot'
 require_relative '../lib/car'
+require_relative '../lib/used_car'
+require_relative '../lib/damage'
+
 
 print  "What is the name of the car lot? "
-lot_name = gets.chomp
+
+lot_name = "kathy's cars"
 
 car_lot = CarLot.new(lot_name)
 
 puts "Car lot is #{car_lot.inspect}"
 
-55.times do |i|
+  55.times do |i|
     makes_models = [{ make: "Volkswagon",
                       models: ['Jetta', 'Bug']},
                     { make: "Audi",
@@ -27,11 +31,17 @@ puts "Car lot is #{car_lot.inspect}"
 #BUG: the model is supposed to return be random model of the given make, but it currently
 # returns just a random model from any one of the makes.
     model = makes_models.sample[:models].sample
-    year = rand(2000..2013)
-    init_value = rand(30_000..50_000)
+    year = rand(2005..2013)
+    init_value = rand(80_000..150_000)
+    mileage = rand(1000..200_000)
 
-  car = Car.new(init_value, make, model, year)
+  car = UsedCar.new(init_value, make, model, year, mileage)
 
-  puts "Car = #{car.inspect}"
+  car_lot.add_car(car)
 
   end
+
+  damage1 = Damage.new("broken trunk", 5_000, 1_000)
+  car_lot.get_car(1).add_damage(damage1)
+  damage2 = Damage.new("broken tire", 200, 50)
+  car_lot.get_car(1).add_damage(damage2)

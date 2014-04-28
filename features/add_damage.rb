@@ -1,6 +1,4 @@
 
-require 'pry'
-
 require_relative '../lib/car_lot'
 require_relative '../lib/car'
 require_relative '../lib/used_car'
@@ -50,17 +48,3 @@ puts "Car lot is #{car_lot.inspect}"
   car_lot.get_car(1).add_damage(damage1)
   damage2 = Damage.new("broken tire", 200, 50)
   car_lot.get_car(1).add_damage(damage2)
-
-binding.pry
-
-#   person = InsurancePerson.new("fname_#{i}", "lname_#{i}", dob_str)
-#   person.married = (rand(2) == 0 ? false : true)
-#   person.smoke_cigarettes = (rand(2) == 0 ? false : true)
-#   # puts "Person = #{person.inspect}"
-
-#   company.add_client(person) if person.is_insurable?
-
-# end
-
-# puts "Insurance Company #{company.name} has #{company.get_clients.length} clients."
-# puts "Insurance Company #{company.name} has #{company.get_smokers.length} smoking clients."
