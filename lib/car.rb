@@ -31,13 +31,17 @@ class Car
     Time.now.year - self.year
   end
 
+  def yearly_dep
+    self.init_value / USEFUL_LIFE
+  end
 
-  # def yearly_dep
-  #   init_value /
-  # end
-
-
-
+  def dep
+    if age <= USEFUL_LIFE
+      self.yearly_dep * self.age
+    else
+      init_value
+    end
+  end
 end
 
 
