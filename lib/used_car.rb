@@ -15,13 +15,26 @@ class UsedCar < Car
     (self.mileage / 10_000) * 1_000
   end
 
+  def cost_reduction_damage
+    damage_total = 0
+    @damages.each do |damage|
+      damage_total += damage.damage_value
+    end
+    return damage_total
+  end
+
   def current_value
-    self.init_value - self.dep - self.cost_reduction_mileage
+    self.init_value - self.dep - self.cost_reduction_mileage - self.cost_reduction_damage
   end
 
   def sales_price(price_adjustment)
     self.current_value + price_adjustment
   end
+
+  def add_damage(damage)
+    @damages << damage
+  end
+
 end
 
 

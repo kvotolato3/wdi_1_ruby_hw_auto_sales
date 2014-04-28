@@ -6,10 +6,11 @@
 - (done) Look up total number of cars on lot
 - (done) Create a used car
 - (done) Look up the sales price of a car
-- Search for cars by make model, or year
-- Set price adjustments
-- Look up the lot value (sum of SP of all cars on the lot)
-- Add damages to cars on the lot
+- (done) Set price adjustments
+- (done) Add damages to cars on the lot
+- (done) Determine damage value based on whether it is repaired.
 - Look up cars by make, model, and year
+- Search for cars by make model, or year
+- Look up the lot value (sum of SP of all cars on the lot)
 
 
