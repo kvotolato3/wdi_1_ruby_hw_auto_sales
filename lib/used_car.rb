@@ -27,7 +27,7 @@ class UsedCar < Car
     self.init_value - self.dep - self.cost_reduction_mileage - self.cost_reduction_damage
   end
 
-  def sales_price(price_adjustment)
+  def sales_price(price_adjustment = 0)
     self.current_value + price_adjustment
   end
 
