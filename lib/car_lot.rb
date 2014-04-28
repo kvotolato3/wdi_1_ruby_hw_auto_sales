@@ -1,6 +1,6 @@
 
 class CarLot
-  attr_reader :name
+  attr_reader :name, :cars
 
   def initialize(lot_name)
     @lot_name = lot_name
@@ -11,13 +11,12 @@ class CarLot
     @cars << car
   end
 
-  def get_lot
-    @cars
+  def get_car(id)
+    self.cars.detect { |car| car.car_id == id }
+  end
+
+  def cars_count
+    self.cars.length
   end
 end
 
-
-
-# methods to create:
-# retrieve cars
-# return lot value

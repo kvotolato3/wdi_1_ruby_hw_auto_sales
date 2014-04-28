@@ -26,7 +26,7 @@ puts "Car lot is #{car_lot.inspect}"
                       models: ['Forrester']}
                    ]
     make = makes_models.sample[:make]
-#BUG: the model is supposed to be a random model of the given make, but it currently
+#BUG: the model is supposed to return be random model of the given make, but it currently
 # returns just a random model from any one of the makes.
     model = makes_models.sample[:models].sample
     year = rand(2000..2013)

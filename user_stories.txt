@@ -2,5 +2,13 @@
 - (done) Create a car lot
 - (done) Create a car
 - (done) Add a car to the lot
+- Look up a car by its car id
+- Look up cars by make, model, and year
 - Look up the sales price of a car
 - Look up the lot value (sum of SP of all cars on the lot)
+- Look up total number of cars on lot
+---car_lot.cars.length
+- Search for cars by make model, or year
+- Set price adjustments
+- Add damages to cars on the lot
+

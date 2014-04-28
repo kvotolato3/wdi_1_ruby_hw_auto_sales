@@ -28,9 +28,9 @@ class Car
   end
 
   def age
-    time = Time.new
-    time.year - year
+    Time.now.year - self.year
   end
+
 
   # def yearly_dep
   #   init_value /
